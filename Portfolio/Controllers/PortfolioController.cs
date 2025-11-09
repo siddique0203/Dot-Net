@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Portfolio.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Portfolio.Models;
+using System.Web.UI.WebControls;
 
 namespace Portfolio.Controllers
 {
@@ -18,12 +19,20 @@ namespace Portfolio.Controllers
         }
         public ActionResult About()
         {
+      
+            ViewBag.Name = "MD ABU BAKAR SIDDIQUE";
+            ViewBag.Title = "Studies BSc in CSE, AIUB";
+            ViewBag.Phone = "01256987456";
             return View();
         }
         public ActionResult Contact()
         {
+            ViewBag.Email = "abcd@gmail.com";
+            ViewBag.Phone = "01236985478";
+            ViewBag.Address = "Kuril, Dhaka";
             return View();
         }
+         
         public ActionResult Education()
         {
             Education[] e =new Education[3];
